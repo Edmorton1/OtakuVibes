@@ -3,7 +3,8 @@ export interface buildPaths {
   output: string;
   html: string;
   src: string;
-  public: string
+  public: string,
+  server: string
 }
 
 export type buildMode = "production" | "development";

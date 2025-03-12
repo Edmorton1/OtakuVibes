@@ -1,11 +1,12 @@
+import SpotifyModel from "@s/router/models/spotify-model"
 import { Request, Response } from "express"
-import spotifyModel from "../models/spotify-model"
-
 
 class SpotifyController {
-    async getSpotifyToken(req: Request, res: Response) {
-        const model = await spotifyModel.getSpotifyToken()
-        res.json(model)
+    async getSpotifyData(req: Request, res: Response) {
+        // console.log(req.params.params)
+        const response = await SpotifyModel.getSpotifyData(req.params.params)
+        console.log(response)
+        res.json(response)
     }
 }
 

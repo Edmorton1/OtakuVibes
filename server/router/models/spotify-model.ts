@@ -1,19 +1,15 @@
+import $spotify from "@s/router/$spotify";
+// https://api.spotify.com/v1/search?q=morgen&type=album&limit=1
+// https://api.spotify.com/v1/users/Weekend
+// https://api.spotify.com/v1/users/weekend/playlists
+// https://api.spotify.com/v1/search?q=il vento d'oro&type=track&limit=1
+
 class SpotifyModel {
-    async getSpotifyToken() {
-        const response = await fetch('https://accounts.spotify.com/api/token', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: new URLSearchParams({
-                "grant_type": "client_credentials",
-                "client_id": process.env.CLIENT_ID,
-                "client_secret": process.env.CLIENT_SECRET
-            })
-        })
-        const data = await response.json()
-        console.log(data)
-    }
+  async getSpotifyData(params: string) {
+    const request = (await $spotify.get(`https://api.spotify.com/v1/search?q=il vento d'oro&type=track&limit=1`)).data
+    return request
+  }
+
 }
 
-export default new SpotifyModel()
+export default new SpotifyModel();
