@@ -1,4 +1,4 @@
-import $spotify from "@s/router/$spotify";
+import $spotify from "@s/router/spotify/$spotify";
 // https://api.spotify.com/v1/search?q=morgen&type=album&limit=1
 // https://api.spotify.com/v1/users/Weekend
 // https://api.spotify.com/v1/users/weekend/playlists

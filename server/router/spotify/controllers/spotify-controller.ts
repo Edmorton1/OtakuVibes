@@ -1,4 +1,4 @@
-import SpotifyModel from "@s/router/models/spotify-model"
+import SpotifyModel from "@s/router/spotify/models/spotify-model"
 import { Request, Response } from "express"
 
 class SpotifyController {

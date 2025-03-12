@@ -3,7 +3,6 @@ declare namespace NodeJS {
       PORT: string;
       SPOTIFY_CLIENT_ID: string,
       SPOTIFY_CLIENT_SECRET: string,
-      VK_CLIENT_ID: string,
       VK_CLIENT_SECRET: string
     }
   }
